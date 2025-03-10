@@ -2,8 +2,28 @@ body, html{
     height: 100%;
     /* overflow: hidden; */
 }
+.span-inline{
+    display:inline-block; 
+    white-space: normal;
+    word-wrap: break-word;
+    width: 100%;
+}
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+  }
+.w-max-c{
+    width: max-content;
+}
 .color-primary{
     color:#003680
+}
+.bg-color-primary{
+    background-color:#003680
+}
+.btn-group-cstm{
+    width: 100%;
 }
 .whatsapp-button{
     right: 600px;
