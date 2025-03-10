@@ -4,7 +4,10 @@
 .whatsapp-button{
     right: 600px;
 }
-
+#mobile-view{
+    max-width:450px;
+    margin:auto;
+}
 .body-login{
     width: 70%;
     margin:auto;
@@ -21,14 +24,17 @@
         right: 200px;
         padding: 10px;
     }
-
+    #mobile-view{
+        max-width:100%;
+        margin:auto;
+    }
  
 }
 
 /* Mobile (max-width 767px) */
 @media (max-width: 767px) {
     #mobile-view{
-        max-width:450px;
+        max-width:100%;
         margin:auto;
     }
     .whatsapp-button {
