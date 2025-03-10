@@ -19,7 +19,7 @@ body, html{
     padding-bottom: 120px;
 }
 .modal.show .modal-dialog.cstm-dialog {
-    width: 400px;
+    width: auto;
 }
 .is-body{
     height: 100vh;
