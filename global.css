@@ -1,6 +1,6 @@
 body, html{
     height: 100%;
-    overflow: hidden;
+    /* overflow: hidden; */
 }
 .color-primary{
     color:#003680
@@ -35,9 +35,9 @@ body, html{
         max-width:100%;
         margin:auto;
     }
-    .body-login{
+    /* .body-login{
         width: 40%;
-    }
+    } */
 }
 
 /* Mobile (max-width 767px) */
@@ -51,7 +51,7 @@ body, html{
         right: 10px;
         padding: 8px;
     }
-    .body-login{
+    /* .body-login{
         width: 40%;
-    }
+    } */
 }
