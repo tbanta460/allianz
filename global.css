@@ -16,12 +16,31 @@ ul {
 .w-max-c{
     width: max-content;
 }
+/* Progress Bar */
+.progress-bar{
+    background-color: #003680;
+}
+/* End Progress Bard */
+/* Custome Color */
 .color-primary{
     color:#003680
 }
 .bg-color-primary{
     background-color:#003680
 }
+.color-second{
+    color:#FFB833;
+}
+.bg-color-second{
+    background-color: #FFB833;
+}
+.bg-color-thr{
+    background-color: #74D7F1;
+}
+.bg-color-four{
+    background-color: #863BA6;
+}
+/* End custome Color */
 .btn-group-cstm{
     width: 100%;
 }
@@ -44,6 +63,9 @@ ul {
 }
 .is-body{
     height: 100vh;
+}
+.btn-check:checked+.btn, .btn.active, .btn.show, .btn:first-child:active, :not(.btn-check)+.btn:active{
+    background-color: #0D5DC9;
 }
 /* Tablet (768px - 1024px) */
 @media (max-width: 1024px) {
