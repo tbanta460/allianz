@@ -10,14 +10,46 @@
         integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
     <link rel="stylesheet" href="../login/login.css">
     <link rel="stylesheet" href="../global.css">
+    <style>
+        .camera-container {
+    position: relative;
+    width: 100%;
+    height: 500px;
+    background: black;
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+video {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+#capture-btn {
+    position: absolute;
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    background: white;
+    border: 3px solid black;
+    border-radius: 50%;
+    width: 60px;
+    height: 60px;
+    font-size: 20px;
+    cursor: pointer;
+}
+    </style>
 </head>
 
 <body>
     <div class="containers text-white">
         <div id="mobile-view">
             <div class="header bg-color-primary ">
-                <div class="d-flex justify-content-center p-3">
-                    <div class="d-flex flex-column justify-content-center">
+                
+                <div class="d-flex  p-3">
+                    <div class="align-items-center d-flex flex-row" style="gap:130px">
+                        <div class="arrow-left"></div>
                         <span>POV Semua</span>
                     </div>
 
@@ -35,6 +67,19 @@
                     </a>
                 </div>
             </div>
+
+
+
+            <div class="camera-container">
+                <video id="camera-stream" autoplay playsinline></video>
+                <button id="capture-btn">📸 Capture</button>
+            </div>
+            <canvas id="snapshot"></canvas>
+
+
+
+
+
         </div>
     </div>
 
@@ -68,5 +113,25 @@
         });
     })
 </script>
+<script>
+    navigator.mediaDevices.getUserMedia({ video: true })
+    .then((stream) => {
+        document.getElementById('camera-stream').srcObject = stream;
+    })
+    .catch((error) => {
+        console.error("Gagal mengakses kamera:", error);
+    });
 
+document.getElementById('capture-btn').addEventListener('click', function () {
+    let video = document.getElementById('camera-stream');
+    let canvas = document.getElementById('snapshot');
+    let ctx = canvas.getContext('2d');
+    
+    canvas.width = video.videoWidth;
+    canvas.height = video.videoHeight;
+    
+    ctx.drawImage(video, 0, 0, canvas.width, canvas.height);
+    alert("Foto berhasil diambil!");
+});
+</script>
 </html>

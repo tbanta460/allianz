@@ -1,6 +1,68 @@
+@font-face {
+    font-family: 'AllianzNeo';
+    src: url('./public/Font/AllianzNeo-Bold.ttf') format('truetype'),
+         url('./public/Font/AllianzNeo-Bold.ttf') format('truetype');
+    font-weight: bold;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'AllianzNeo';
+    src: url('./public/Font/AllianzNeo-Regular.ttf') format('truetype'),
+         url('./public/Font/AllianzNeo-Regular.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'AllianzNeo';
+    src: url('./public/Font/AllianzNeo-Italic.ttf') format('truetype'),
+         url('./public/Font/AllianzNeo-Italic.ttf') format('truetype');
+    font-weight: normal;
+    font-style: italic;
+}
+@font-face {
+    font-family: 'AllianzNeo';
+    src: url('./public/Font/AllianzNeo-BoldItalic.ttf') format('truetype'),
+         url('./public/Font/AllianzNeo-BoldItalic.ttf') format('truetype');
+    font-weight: bold;
+    font-style: italic;
+}
+@font-face {
+    font-family: 'AllianzNeo';
+    src: url('./public/Font/AllianzNeo-SemiBold.ttf') format('truetype'),
+         url('./public/Font/AllianzNeo-SemiBold.ttf') format('truetype');
+    font-weight: 600;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'AllianzNeo';
+    src: url('./public/Font/AllianzNeo-Light.ttf') format('truetype'),
+         url('./public/Font/AllianzNeo-Light.ttf') format('truetype');
+    font-weight: lighter;
+    font-style: normal;
+}
+
+
+
+@font-face {
+    font-family: 'AllianzNeo';
+    src: url('./public/Font/AllianzNeo-Regular.ttf') format('truetype'),
+         url('./public/Font/AllianzNeo-Regular.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
 body, html{
+    font-family: "AllianzNeo";
     height: 100%;
     /* overflow: hidden; */
+}
+.arrow-left {
+    display: inline-block;
+    width: 12px;
+    height: 12px;
+    border-left: 3px solid white;  /* Garis kiri */
+    border-bottom: 3px solid white; /* Garis bawah */
+    transform: rotate(45deg); /* Rotasi agar membentuk "<" */
 }
 .span-inline{
     display:inline-block; 
