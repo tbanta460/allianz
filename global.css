@@ -41,6 +41,10 @@ ul {
     background-color: #863BA6;
 }
 /* End custome Color */
+.container-body{
+    width: 95%;
+    margin:0 auto;
+}
 .btn-group-cstm{
     width: 100%;
 }
