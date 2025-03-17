@@ -100,7 +100,6 @@ video#camera-stream {
     overflow-clip-margin: unset;
     width: 100%;
     object-fit: cover;
-    height: 500px;
 }
 
 .camera-container {
@@ -320,8 +319,8 @@ ul {
 
 <body class="">
 
-    <div class="containers text-white">
-        <div id="mobile-view">
+    <div class="containers text-white" style="height:100%">
+        <div id="mobile-view" style="height:100%">
             <div class="header bg-color-primary ">
 
                 <div class="d-flex  p-3">
@@ -334,7 +333,7 @@ ul {
                 </div>
             </div>
 
-            <div class=" color-primary position-relative d-flex flex-column  ">
+            <div class=" color-primary position-relative d-flex flex-column  " style="height:100%">
                 <div class="camera-container">
                     <video id="camera-stream" autoplay playsinline></video>
 
