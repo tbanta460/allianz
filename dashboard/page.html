@@ -494,8 +494,8 @@
                 canvas.width = video.videoWidth;
                 canvas.height = video.videoHeight;
                 let landscape = video.videoWidth > video.videoHeight;
-                alert(landscape)
-                $("#snapshot").attr("style", `width:250px; height:${(230 / video.videoWidth) * video.videoHeight}`)
+                alert(video.videoWidth, video.videoHeight)
+                $("#snapshot").attr("style", `width:250px; height:${(444 / video.videoWidth) * video.videoHeight}`)
                 if(currentFacingMode == "user"){
                     ctx.translate(canvas.width, 0);
                     ctx.scale(-1, 1);
