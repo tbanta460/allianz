@@ -454,6 +454,7 @@
                 })
             })
             async function startCamera(facingMode) {
+                $("#camera-stream").removeAttr("style")
                 if (videoStream) {
                     videoStream.getTracks().forEach(track => track.stop()); // Hentikan stream lama
                 }
@@ -465,8 +466,10 @@
 
                     $("#camera-stream")[0].srcObject = videoStream;
 
-
-
+                
+                    if(facingMode == "user"){
+                        $("#camera-stream").attr("style", "transform:scaleX(-1)")
+                    }
 
 
                     currentFacingMode = facingMode; // Simpan mode yang sedang digunakan
@@ -487,18 +490,22 @@
             })
             $("#capture-btn").on("click", function () {
                 $("#exampleModal").removeClass("isHideModal").addClass("isShowModal");
-
+               
                 let video = $("#camera-stream")[0];
                 let canvas = $("#snapshot")[0];
                 let ctx = canvas.getContext("2d");
-                // ctx.translateX(canvas.width, 0);
-                // **Pastikan ukuran canvas sesuai dengan video**
                 canvas.width = video.videoWidth;
                 canvas.height = video.videoHeight;
+                if(currentFacingMode == "user"){
+                    ctx.translate(canvas.width, 0);
+                    ctx.scale(-1, 1);
+                }
+                ctx.drawImage(video, 0, 0, canvas.width, canvas.height);
+                ctx.restore();
+                
                 
                 // **Gambar video ke dalam canvas**
-                ctx.drawImage(video, 0, 0, canvas.width, canvas.height);
-
+         
                 // **Konversi ke Base64 setelah gambar sudah ada di canvas**
                 base64 = canvas.toDataURL("image/png");
 
